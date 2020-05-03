@@ -1,0 +1,53 @@
+.left-menu{
+    float: left;
+}
+
+.task-menu{
+    
+}
+
+.header{
+    padding: 5px 16px;
+}
+
+.menu {
+    /* list-style-type: none; */
+    margin: 0;
+    padding: 0;
+    margin-right: 25px;
+    overflow: hidden;
+}
+
+.task-count{
+    display: inline;
+    margin-right: 5px;
+    margin-top: 4px;
+}
+
+.menu-item {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    border-radius: 20px;
+    /* text-decoration: none; */
+}
+
+.menu-item-active {
+    background-color: rgb(226, 225, 225);
+    border-radius: 20px;
+    /* color: white; */
+}
+
+.menu-item:hover:not(.menu-item-active) {
+    background-color: rgb(240, 240, 240);
+    /* color: white; */
+}
+
+.icon-20 {
+    display: inline;
+    font-size: 20px;
+}
+
+.bold{
+    font-weight: bold;
+}

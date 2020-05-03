@@ -1,0 +1,59 @@
+[class*='col-'] {
+    margin: auto;
+    float: left;
+    /* border: solid blue; */
+}
+
+.col-10{
+    width: 10%;
+    /* border: solid black; */
+}
+
+.col-15{
+    width: 15%;
+    min-width: 190px;
+    /* border: solid black; */
+}
+.col-25{
+    width: 25%;
+    /* border: solid black; */
+}
+@media screen and (max-device-width: 1000px), (max-width: 1000px) {
+    .col-25 {
+        width: 20%;
+    }
+}
+@media screen and (max-device-width: 800px), (max-width: 800px) {
+    .col-25 {
+        width: 15%;
+    }
+}
+/* @media screen and (max-device-width: 800px), (max-width: 800px) {
+    .col-25 {
+        width: 10%;
+    }
+} */
+@media screen and (max-device-width: 200px), (max-width: 200px) {
+    .col-25 {
+        width: 5%;
+    }
+}
+
+.col-30{
+    width: 30%;
+    /* border: solid black; */
+}
+
+.col-40{
+    width: 35%;
+    /* border: solid black; */
+}
+
+.col-50{
+    width: 60%;
+    /* border: solid black; */
+}
+
+.col-90{
+    /* width: 90%; */
+}

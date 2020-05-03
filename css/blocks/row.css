@@ -1,0 +1,14 @@
+.row {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: -4px;
+    /* border: solid red; */
+    min-height: 210px;
+    height: 100%;
+}
+
+.main-content{
+    margin-left: auto;
+    margin-right: auto;
+    /* border: solid red; */
+}

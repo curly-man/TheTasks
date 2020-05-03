@@ -1,0 +1,8 @@
+const httpRequest = new HttpRequest(API_URL)
+const taskRepository = new TaskRepository(httpRequest)
+const content = new Content(CONTENT_AREA_ID)
+const contentMenu = new ContentMenu(CONTENT_TYPES.INBOX)
+const page = new Page(content, contentMenu, taskRepository)
+// let confirm = new Confirm("asd", "asddddd")
+// document.getElementById(CONFIRM_ELEMENT_ID).innerHTML = confirm.render()
+page.render()

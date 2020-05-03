@@ -1,0 +1,33 @@
+.mt-3{
+    margin-top: 3px;
+}
+
+.mt-10{
+    margin-top: 10px;
+}
+
+.mt-15{
+    margin-top: 15px;
+}
+
+.mt-20{
+    margin-top: 20px;
+}
+
+.mt-30{
+    position: relative;
+    top: 20px;
+    margin-top: 30px;
+}
+
+.mr-10{
+    margin-right: 10px;
+}
+
+.ml-10{
+    margin-left: 10px;
+}
+
+.ml-20{
+    margin-left: 20px;
+}
