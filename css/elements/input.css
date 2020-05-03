@@ -1,5 +1,4 @@
 .input-task-add{
-    /* width: 80%; */
     min-width: 315px;
     padding: 10px 10px 10px 5px;
     color: rgb(71, 71, 71);
@@ -51,16 +50,13 @@
     box-shadow: none;
     height: 20px;
     color: rgb(71, 71, 71);
-    /* width: 70%; */
     border: 1px solid white;
     border-radius: 10px;
-    /* border: none; */
     transition: 0.5s;
 }
 
 .input-task:focus {
     outline: none;
-    /* border: 1px solid rgb(104, 104, 104); */
     border-radius: 10px;
     transition: 0.5s;
 }

@@ -1,14 +1,11 @@
 .task-add {
-    /* width: 100%; */
     display: inline-block;
     max-width: 400px;
     min-width: 370px;
-    /* border: solid red; */
 }
 
 .task {
     display: inline-block;
     max-width: 400px;
     min-width: 370px;
-    /* width: 95%; */
 }
