@@ -23,6 +23,10 @@ class Page {
         return taskElementID.split("_")[1]
     }
 
+    confirmAction(action, taskName){
+        return new ConfirmAction(action, taskName).start()
+    }
+
     changeMenuItemEvent(event) {
         this.content.clear()
         let element = event.target
@@ -46,7 +50,8 @@ class Page {
 
     completeTaskEvent(event) {
         const taskElementID = this.getTaskElementID(event)
-        new ConfirmAction("COMPLETE", this.repository.findTask(this.getTaskID(taskElementID)).name).start()
+        const task = this.repository.findTask(this.getTaskID(taskElementID))
+        this.confirmAction(ACTIONS.COMPLETE, task.name)
             .then((result) => {
                 if (result === true) {
                     this.repository.completeTask(this.getTaskID(taskElementID))
@@ -56,7 +61,7 @@ class Page {
                         })
                 }
                 else {
-                    event.target.parentElement.innerHTML = this.repository.findTask(this.getTaskID(taskElementID)).render()
+                    event.target.parentElement.innerHTML = task.render()
                 }
             })
     }
@@ -64,20 +69,22 @@ class Page {
     changeTaskEvent(event) {
         const taskElementID = this.getTaskElementID(event)
         const newName = event.target.value
-        new ConfirmAction("CHANGE", this.repository.findTask(this.getTaskID(taskElementID)).name).start()
+        const task = this.repository.findTask(this.getTaskID(taskElementID))
+        this.confirmAction(ACTIONS.CHANGE, task.name)
             .then((result) => {
                 if (result === true) {
                     this.repository.changeTask(this.getTaskID(taskElementID), newName)
                 }
                 else {
-                    event.target.value = this.repository.findTask(this.getTaskID(taskElementID)).name
+                    event.target.value = task.name
                 }
             })
     }
 
     deleteTaskEvent(event) {
         const taskElementID = this.getTaskElementID(event)
-        new ConfirmAction("DELETE", this.repository.findTask(this.getTaskID(taskElementID)).name).start()
+        const task = this.repository.findTask(this.getTaskID(taskElementID))
+        this.confirmAction(ACTIONS.DELETE, task.name)
             .then((result) => {
                 if (result === true) {
                     this.repository.deleteTask(this.getTaskID(taskElementID))
