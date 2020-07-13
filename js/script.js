@@ -1,0 +1,6 @@
+const httpRequest = new HttpRequest(API_URL)
+const taskRepository = new TaskRepository(httpRequest)
+const content = new Content(CONTENT_AREA_ID)
+const contentMenu = new ContentMenu(CONTENT_TYPES.INBOX)
+const page = new Page(content, contentMenu, taskRepository)
+page.render()

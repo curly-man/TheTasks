@@ -1,0 +1,17 @@
+@import "./blocks/row.css";
+@import "./blocks/column.css";
+@import "./blocks/confirm.css";
+
+@import "./elements/menu.css";
+@import "./elements/input.css";
+@import "./elements/task.css";
+
+@import "./modificator/margin.css";
+@import "./modificator/width.css";
+
+@import "./fontawesome/font-awesome.css";
+
+body {
+    font-family: Roboto, sans-serif;
+    color: rgb(27, 27, 27);
+}

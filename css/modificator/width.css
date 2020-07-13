@@ -1,0 +1,23 @@
+.mw-20{
+    margin: auto;
+    float: left;
+    min-width: 10px;
+}
+
+.w-300{
+    margin: auto;
+    float: left;
+    width: 70%;
+    max-width: 300px;
+}
+
+.mw-190{
+    margin: auto;
+    float: left;
+}
+
+.mw-300{
+    margin: auto;
+    float: left;
+    width: 300px;
+}

@@ -1,0 +1,96 @@
+.input-task-add{
+    min-width: 315px;
+    padding: 10px 10px 10px 5px;
+    color: rgb(71, 71, 71);
+    border: none;
+    border-bottom: 1px solid black;
+    transition: 1s;
+}
+
+.input-task-add:focus {
+    outline: none;
+    border-bottom: 1px solid rgb(55, 48, 255);
+    transition: 1s;
+}
+
+.input-task-add:hover {
+    outline: none;
+    border-bottom: 1px solid rgb(55, 48, 255);
+    transition: 1s;
+}
+
+.input-task-add::placeholder {
+    color: rgb(136, 136, 136);
+    transition: 1s;
+}
+
+.input-task-done{
+    display: inline-block;
+    position: relative;
+    top: 4px;
+    width: 10%;
+    min-width: 18px;
+    height: 18px;
+    transition: 0.5s;
+}
+
+.input-task-done::after{
+    display: inline-block;
+    position: relative;
+    top: 4px;
+    width: 18px;
+    height: 18px;
+    transition: 0.5s;
+}
+
+.input-task{
+    font-size: 14px;
+    padding: 10px 10px 10px 5px;
+    display: inline-block;
+    box-shadow: none;
+    height: 20px;
+    color: rgb(71, 71, 71);
+    border: 1px solid white;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.input-task:focus {
+    outline: none;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.input-task::placeholder {
+    color: rgb(136, 136, 136);
+    transition: 0.5s;
+}
+
+.btn{
+    margin: auto;
+    float: left;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.btn:focus {
+    outline: none;
+    transition: 1s;
+}
+
+.btn:hover {
+    outline: none;
+    transition: 1s;
+}
+
+.btn-delete{
+    float: right;
+    transition: 0.5s;
+}
+
+.btn-delete-logo{
+    float: right;
+    transition: 0.5s;
+}
