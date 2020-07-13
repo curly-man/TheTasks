@@ -14,8 +14,22 @@ class ConfirmAction {
         <div class="confirm">
             <div>
                 <a id="confirm-info" class="confirm-message"></a>
-                <button type="button" class="confirm-button" onclick="declineAction(event)" aria-hidden="true">Decline</button>
-                <button type="button" class="confirm-button" onClick="approveAction(event)" aria-hidden="true">Approve</button>
+                <button
+                    type="button"
+                    class="confirm-button"
+                    onclick="declineAction(event)"
+                    aria-hidden="true"
+                >
+                    Decline
+                </button>
+                <button
+                    type="button"
+                    class="confirm-button"
+                    onClick="approveAction(event)"
+                    aria-hidden="true"
+                >
+                    Approve
+                </button>
             </div>
         </div>
         `

@@ -1,14 +1,16 @@
 class Page {
     constructor(content, contentMenu, repository) {
-        this.content = content
-        this.contentMenu = contentMenu
-        this.repository = repository
-        this.addTaskElement = document.getElementById(ADD_TASK_ELEMENT_ID)
-        this.confirmElement = document.getElementById(CONFIRM_ELEMENT_ID)
+        this.root = document.getElementById('root');
+        this.content = content;
+        this.contentMenu = contentMenu;
+        this.repository = repository;
+        this.confirmElement = document.getElementById(CONFIRM_ELEMENT_ID);
     }
     render() {
-        this.content.render(this.repository.getTasks(this.contentMenu.getContentType()))
-        this.updateMenu()
+        const tasks = this.repository.getTasks(this.contentMenu.getContentType());
+        const pageData = this.contentMenu.render() + this.content.render(tasks);
+        this.root.innerHTML = pageData;
+        this.updateMenu();
     }
 
     updateMenu() {
@@ -28,24 +30,24 @@ class Page {
     }
 
     changeMenuItemEvent(event) {
-        this.content.clear()
-        let element = event.target
+        let element = event.target;
         if (element.tagName != "LI") {
-            element = element.parentElement
+            element = element.parentElement;
         }
-        this.contentMenu.changeContentType(element.id)
-        this.render()
+        this.contentMenu.changeContentType(element.id);
+        this.render();
     }
 
     addTaskEvent(event) {
-        this.repository.addTask(this.addTaskElement.value)
+        const addTaskElement = document.getElementById(ADD_TASK_ELEMENT_ID);
+        this.repository.addTask(addTaskElement.value)
             .then((task) => {
                 if (this.contentMenu.getContentType() === CONTENT_TYPES.INBOX) {
-                    this.content.renderTask(task)
+                    this.content.addTask(task)
                 }
                 this.updateMenu()
+                this.content.clearInputValue()
             })
-        this.addTaskElement.value = ''
     }
 
     completeTaskEvent(event) {
@@ -56,8 +58,7 @@ class Page {
                 if (result === true) {
                     this.repository.completeTask(this.getTaskID(taskElementID))
                         .then(() => {
-                            this.updateMenu()
-                            this.content.removeTask(taskElementID)
+                            this.render()
                         })
                 }
                 else {

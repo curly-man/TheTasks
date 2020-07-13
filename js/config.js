@@ -15,6 +15,7 @@ const MENU_TASKS_COUNT_ID = {
     INBOX_ID: "inbox_task_count",
     COMPLETE_ID: "complete_task_count"
 }
+
 const CONTENT_TYPES = {
     INBOX: "inbox",
     COMPLETE: "complete"

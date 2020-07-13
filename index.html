@@ -8,56 +8,10 @@
 </head>
 
 <body>
-    <div>
-        <div class="col-30" style="height: 0.1px;"></div>
-        <div id="confirm_element">
-        </div>
-        <div class="col-25" style="height: 0.1px;"></div>
-    </div>
-    <br>
-    <div class="row">
-        <div class="col-25" style="height: 0.1px;"></div>
-        <div class="col-15">
-            <div class="left-menu">
-                <h2 class="header">The Tasks</h2>
-                <nav>
-                    <ul class="menu">
-                        <li class="menu-item menu-item-active" id="inbox" onClick="page.changeMenuItemEvent(event)">
-                            <div class="icon-20 mr-10 fa fa-inbox">
-                            </div>
-                            <a class="task-type">Inbox</a>
-                            <a id="inbox_task_count" class="task-count bold"></a>
-                        </li>
-                        <li class="menu-item" id="complete" onClick="page.changeMenuItemEvent(event)">
-                            <div class="icon-20 mr-10 fa fa-check-circle">
-                            </div>
-                            <a class="task-type">Complete</a>
-                            <a id="complete_task_count" class="task-count bold"></a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-        <div class="col-40">
-            <div class="main-content">
-                <div class="task-menu">
-                    <div id="addTask" class="task-add mt-20">
-                        <button class="btn" type="button" onClick="page.addTaskEvent(event)">
-                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                        </button>
-                        <input id="addTask_Name" type="text" class="input-task-add mt-3" onChange="page.addTaskEvent(event)" placeholder="Add Task">
-                    </div>
-                    <div id="tasks" class="mt-20">
-                    </div>
-                </div>
-                <div style="clear: both;"></div>
-            </div>
-        </div>
-        <div class="col-25" style="height: 0.1px;"></div>
-    </div>
+    <div id="root"></div>
 
     <script src="./js/config.js"></script>
-    <script src="./js/HttpRequestMaker.js"></script>
+    <script src="./js/HttpRequest.js"></script>
     <script src="./js/TaskRepository.js"></script>
     <script src="./js/Content.js"></script>
     <script src="./js/Task.js"></script>

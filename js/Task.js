@@ -18,10 +18,24 @@ class Task{
             check = 'checked'
         }
         const newTask = `
-            <div id=${'task_'+this.id} class="task">
-                <input type="checkbox" ${check} class="input-task-done ml-10" onclick="page.completeTaskEvent(event)">
-                <input class="input-task ml-10" onchange="page.changeTaskEvent(event)" value="${this.name}">
-                <button class="btn btn-delete fa fa-trash" type="button" onClick="page.deleteTaskEvent(event)" aria-hidden="true">
+            <div id='${'task_'+this.id}' class="task">
+                <input
+                    type="checkbox"
+                    ${check}
+                    class="input-task-done ml-10"
+                    onclick="page.completeTaskEvent(event)"
+                >
+                <input
+                    class="input-task ml-10"
+                    onchange="page.changeTaskEvent(event)"
+                    value="${this.name}"
+                >
+                <button
+                    class="btn btn-delete fa fa-trash"
+                    type="button"
+                    onClick="page.deleteTaskEvent(event)"
+                    aria-hidden="true"
+                >
                 </button>
                 <hr>
             </div>`
